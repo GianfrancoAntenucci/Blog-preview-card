@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(47, 88%, 63%);
+    font-family: "Figtree", sans-serif;
+  }
+  
+  /* Add container for positioning */
+.blog-card-container {
+  box-sizing: border-box;
+}
+
+/* Darker shadow effect */
+.blog-card {
+  padding: 20px;
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 1); /* Bottom-right shadow */
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 340px;
+  height: auto; /* Height adjusts based on content by default */
+  position: relative;
+}
+  
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .card-content {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: hsl(47, 88%, 63%);
+    color: hsl(0, 0%, 0%);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  
+  .date {
+    font-size: 12px; /* Adjust font size to make it smaller */
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 8px 0;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: hsl(0, 0%, 42%);
+  }
+  
+  .author {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .author-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .author-name {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  @media (min-width: 375px) {
+    .blog-card {
+      width: 400px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .blog-card {
+      width: 450px;
+    }
+  }
+
+  .title:hover,
+.title:focus {
+  color: hsl(47, 88%, 63%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Attribution positioning */
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 0%);
+}
+
+/* MEDIA QUERIES: Adjust styles for smaller or larger screens */
+@media (max-width: 480px) {
+  .blog-card {
+    max-width: 70%; /* Shrinks the card to occupy 90% of the viewport width */
+    min-height: 500px; /* Increase minimum height for taller card */
+    padding: 24px;
+  }
+
+  .thumbnail {
+    height: 180px; /* Reduce image height for smaller screens */
+  }
+
+  .card-content {
+    padding: 8px 0; /* Less padding inside the content area */
+  }
+
+  .title {
+    font-size: 16px; /* Slightly smaller text for titles */
+  }
+
+  .description {
+    font-size: 12px; /* Smaller font for descriptions */
+    line-height: 1.4; /* Slightly tighter line spacing */
+  }
+
+  .author {
+    margin-top: 8px; /* Save vertical space */
+  }
+
+  .author-name {
+    font-size: 12px; /* Smaller font for author name */
+  }
+
+  .attribution {
+    font-size: 10px; /* Shrink attribution text */
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-card {
+    max-width: 400px; /* Allow a larger card on wider screens */
+  }
+}
